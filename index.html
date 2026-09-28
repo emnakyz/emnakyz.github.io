@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammet Emin Akyüz – Yazılım Geliştirici</title>
+<meta name="description" content="Muhammet Emin Akyüz: .NET, ASP.NET Core Web API ve Angular ile kurumsal web uygulamaları geliştiren yazılım geliştirici.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammet Emin Akyüz – Yazılım Geliştirici">
+<meta property="og:description" content=".NET, ASP.NET Core Web API, Angular ve Flutter ile geliştirdiğim projeler, teknoloji yığınım ve iletişim bilgilerim.">
+<meta property="og:url" content="https://emnakyz.github.io/">
+<meta property="og:image" content="https://emnakyz.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://emnakyz.github.io/og-image.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#0a1120;--panel:#0f192d;--bar:#0b1424;--line:#22304d;--text:#dbe4f5;--mute:#8497b8;--acc:#66e3d3;--warm:#ffb454;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;min-height:100vh;color:var(--text);font:16px/1.6 Sora,system-ui,-apple-system,"Segoe UI",sans-serif;background-color:var(--bg);background-image:linear-gradient(rgba(102,227,211,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(102,227,211,.045) 1px,transparent 1px);background-size:32px 32px}
+.wrap{max-width:860px;margin:0 auto;padding:40px 20px 64px}
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+.top{display:flex;justify-content:flex-end;margin-bottom:28px}
+#lang{font:inherit;font-size:.78rem;color:var(--mute);background:none;border:1px solid var(--line);border-radius:6px;padding:5px 12px;cursor:pointer}
+#lang:hover{color:var(--acc);border-color:var(--acc)}
+header h1{font-size:clamp(2.4rem,7vw,4rem);line-height:1.05;margin:0 0 14px;letter-spacing:-.03em;font-weight:700}
+header p{margin:0;max-width:52ch;color:var(--mute);font-size:1.05rem}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-size:.85rem}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(102,227,211,.55)}70%,100%{box-shadow:0 0 0 9px rgba(102,227,211,0)}}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{font-size:.85rem;text-decoration:none;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:9px 18px}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--bg);font-weight:600}
+.btn.p:hover{color:var(--bg);filter:brightness(1.08)}
+.win{margin-top:36px;border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow:hidden}
+[role=tablist]{display:flex;background:var(--bar);border-bottom:1px solid var(--line);overflow-x:auto}
+[role=tab]{font:inherit;font-size:.82rem;color:var(--mute);background:none;border:0;border-right:1px solid var(--line);padding:12px 18px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;margin-bottom:-1px}
+[role=tab]:hover{color:var(--text)}
+[role=tab][aria-selected=true]{color:var(--acc);background:var(--panel);border-bottom-color:var(--acc)}
+:focus-visible{outline:2px solid var(--warm);outline-offset:-2px}
+.pane{padding:22px 22px 26px;min-height:340px}
+.cmd{font-size:.85rem;color:var(--mute);margin:0 0 18px;min-height:1.4em}
+.cmd b{color:var(--acc);font-weight:600}
+.caret{display:inline-block;width:.55em;height:1em;background:var(--acc);vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.out p{margin:0 0 16px;max-width:62ch}
+dl{display:grid;grid-template-columns:110px 1fr;gap:10px 16px;margin:22px 0 0;font-size:.92rem}
+dt{color:var(--mute);font-size:.82rem;padding-top:2px}
+dd{margin:0}
+.chips{display:flex;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+.chip{font:inherit;font-size:.8rem;color:var(--mute);background:none;border:1px solid var(--line);border-radius:999px;padding:5px 14px;cursor:pointer}
+.chip[aria-pressed=true]{color:var(--bg);background:var(--acc);border-color:var(--acc)}
+.proj{border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-bottom:12px;background:rgba(255,255,255,.015)}
+.proj h3{margin:0 0 4px;font-size:1rem;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.proj h3 span{font-size:.75rem;color:var(--warm);font-weight:400}
+.proj p{margin:0 0 8px;font-size:.92rem;color:var(--mute)}
+.tags{font-size:.75rem;color:var(--acc)}
+.diag{margin-top:14px;overflow-x:auto;border-top:1px dashed var(--line);padding-top:12px}
+.diag small{display:block;color:var(--mute);font-size:.72rem;margin-top:6px}
+.row{padding:12px 0;border-bottom:1px solid var(--line);font-size:.92rem}.row small{color:var(--mute);margin-right:14px;font-size:.78rem;display:inline-block;min-width:84px}.row.hl{color:var(--acc)}
+.grp{margin-bottom:18px}
+.grp h3{margin:0 0 8px;font-size:.82rem;font-weight:400;color:var(--mute)}
+.grp div{display:flex;flex-wrap:wrap;gap:8px}
+.grp span{font-size:.82rem;border:1px solid var(--line);border-radius:4px;padding:4px 10px}
+.links a{display:block;color:var(--text);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.links a:hover{color:var(--acc)}
+.links a small{color:var(--mute);margin-right:14px;font-size:.78rem;display:inline-block;min-width:70px}
+footer{margin-top:28px;color:var(--mute);font-size:.8rem}
+@media(max-width:560px){dl{grid-template-columns:1fr;gap:2px}dt{margin-top:10px}.pane{padding:18px 16px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top mono"><button id="lang" type="button"></button></div>
+<header>
+  <h1>Muhammet Emin Akyüz</h1>
+  <p data-i="tag"></p>
+  <div class="status mono"><i></i><span data-i="status"></span></div>
+  <div class="btns">
+    <a class="btn p" id="cvbtn" href="cv-tr.pdf" download data-i="cv"></a>
+    <a class="btn" href="mailto:emn.ak100@gmail.com" data-i="mail"></a>
+    <a class="btn" href="https://linkedin.com/in/eminakyz/">LinkedIn</a>
+    <a class="btn" href="https://github.com/emnakyz">GitHub</a>
+  </div>
+</header>
+
+<main class="win">
+  <div role="tablist" class="mono">
+    <button role="tab" id="t-about" aria-selected="true" aria-controls="pane" data-k="about"></button>
+    <button role="tab" id="t-work" aria-selected="false" aria-controls="pane" data-k="work" tabindex="-1"></button>
+    <button role="tab" id="t-stack" aria-selected="false" aria-controls="pane" data-k="stack" tabindex="-1"></button>
+    <button role="tab" id="t-certs" aria-selected="false" aria-controls="pane" data-k="certs" tabindex="-1"></button>
+    <button role="tab" id="t-contact" aria-selected="false" aria-controls="pane" data-k="contact" tabindex="-1"></button>
+  </div>
+  <div class="pane" id="pane" role="tabpanel" aria-labelledby="t-about" tabindex="0">
+    <p class="cmd mono" aria-hidden="true"><b>~/emin $</b> <span id="typed"></span><span class="caret"></span></p>
+    <div class="out" id="out"></div>
+  </div>
+</main>
+<footer class="mono">İstanbul, Türkiye</footer>
+</div>
+
+<script>
+(function(){
+var T={
+tr:{tag:"Yazılım Geliştirici. .NET, ASP.NET Core Web API ve Angular ile kurumsal web uygulamaları geliştiriyorum.",status:"Yeni projelere açık",cv:"CV'yi indir",mail:"E-posta gönder",
+tabs:["hakkimda.md","projeler/","stack.json","sertifikalar/","iletisim.sh"],cmds:["cat hakkimda.md","ls projeler/","cat stack.json","ls sertifikalar/","./iletisim.sh"],
+about:"ASP.NET Core Web API ve Angular ile kurumsal web uygulamaları geliştiriyorum. MSSQL ve PostgreSQL üzerinde veri modelleme ve performans optimizasyonu, Redis ve RabbitMQ ile önbellek ve mesajlaşma, Serilog ve Seq ile merkezi loglama alanlarında çalıştım. Ocak-Mart 2026'da Flutter ve Supabase ile tek başıma VMeet adlı yapay zekâ toplantı asistanını geliştirdim.",
+dl:[["Son görev","Yazılım Geliştirme Uzmanı, Dijital Kurye (2023–2025)"],["Öncesinde","Orta Seviye Yazılım Geliştirici, Nar Bilişim (2021–2023)"],["Eğitim","Yazılım Mühendisliği, İstanbul Sabahattin Zaim Üniversitesi"],["Sertifika","Microsoft Certified: Azure Developer Associate"],["Diller","Türkçe (ana dil), İngilizce (profesyonel)"]],
+chips:["tümü","yapay zekâ","api","web"],filter:"Projeleri filtrele",cap:"TCDD platformundaki bileşenler",
+proj:[{n:"VMeet - Yapay Zekâ Toplantı Asistanı",d:"Toplantıları kaydeden, gerçek zamanlı çeviren ve yapay zekâ ile özetleyen masaüstü uygulaması. Tasarım, Flutter arayüzü, Supabase veri modeli (22 RLS politikası, denetim kaydı), 9 Edge Function ve Stripe abonelik planlarının tamamını tek başıma geliştirdim."},{n:"TCDD Taşımacılık Web Platformu",d:"Backend ve frontend geliştirme. PostgreSQL, RabbitMQ ve Redis entegrasyonları, LDAP ile kullanıcı doğrulama ve e-bilet servisi."},{n:"Kurumsal entegrasyonlar",d:"Turkcell, Türk Telekom, Vodafone, Sipay, Millenicom ve ÜNLÜ &amp; Co ile yürütülen projelerde API geliştirme ve sistem entegrasyonu."},{n:"Kurumsal web projeleri",d:"Üsküdar Belediyesi, Medexpert Clinic, Veritas CRO, Sign2Future ve ECK Elektromekanik için web uygulamaları."}],
+py:["Ocak–Mart 2026","Proje","2023–2025","2021–2023"],grp:["Backend","Frontend","Veri","Altyapı"],
+contact:"Bana en kolay e-posta veya LinkedIn üzerinden ulaşabilirsiniz.",em:"e-posta",sw:"EN"},
+en:{tag:"Software developer building enterprise web applications with .NET, ASP.NET Core Web API and Angular.",status:"Open to new projects",cv:"Download CV",mail:"Send email",
+tabs:["about.md","projects/","stack.json","certificates/","contact.sh"],cmds:["cat about.md","ls projects/","cat stack.json","ls certificates/","./contact.sh"],
+about:"I build enterprise web applications with ASP.NET Core Web API and Angular. I have worked on data modeling and performance tuning in MSSQL and PostgreSQL, caching and messaging with Redis and RabbitMQ, and centralized logging with Serilog and Seq. In January to March 2026 I built VMeet, an AI meeting assistant, on my own with Flutter and Supabase.",
+dl:[["Latest role","Software Development Specialist, Dijital Kurye (2023–2025)"],["Before","Mid-level Software Developer, Nar Bilişim (2021–2023)"],["Education","B.Sc. Software Engineering, Istanbul Sabahattin Zaim University"],["Certificate","Microsoft Certified: Azure Developer Associate"],["Languages","Turkish (native), English (professional)"]],
+chips:["all","ai","api","web"],filter:"Filter projects",cap:"Components in the TCDD platform",
+proj:[{n:"VMeet - AI Meeting Assistant",d:"A desktop app that records meetings, translates them in real time and summarizes them with AI. I built all of it on my own: design, Flutter interface, Supabase data model (22 RLS policies, audit log), 9 Edge Functions and Stripe subscription plans."},{n:"TCDD Transportation Web Platform",d:"Backend and frontend development. PostgreSQL, RabbitMQ and Redis integrations, LDAP user authentication and an e-ticket service."},{n:"Enterprise integrations",d:"API development and system integration in projects with Turkcell, Türk Telekom, Vodafone, Sipay, Millenicom and ÜNLÜ &amp; Co."},{n:"Corporate web projects",d:"Web applications for Üsküdar Municipality, Medexpert Clinic, Veritas CRO, Sign2Future and ECK Elektromekanik."}],
+py:["Jan–Mar 2026","Project","2023–2025","2021–2023"],grp:["Backend","Frontend","Data","Infrastructure"],
+contact:"The easiest way to reach me is email or LinkedIn.",em:"email",sw:"TR"}};
+var meta=[{t:"ai",s:"Flutter · Riverpod · Supabase · PostgreSQL · Deno/TypeScript · Stripe · DeepSeek · DeepL · Recall.ai"},{t:"web",s:".NET Core 6 · Angular · PostgreSQL",g:1},{t:"api",s:"ASP.NET Core Web API · Redis · RabbitMQ · Serilog/Seq"},{t:"web",s:"ASP.NET MVC · MSSQL · Entity Framework"}];
+var stack=[["C#","ASP.NET Core Web API","ASP.NET MVC","SOAP","WCF"],["Angular","JavaScript","jQuery","AJAX","Flutter","Dart","Riverpod"],["MSSQL","PostgreSQL","Supabase","Oracle PL/SQL","MongoDB","Dapper","Entity Framework"],["Redis","RabbitMQ","Docker","GitHub Actions","Deno","IIS","Serilog","Seq","Elasticsearch","SignalR"]];
+var certs=[["Microsoft", "Microsoft Certified: Azure Developer Associate", 1], ["İSZÜ", "Etkili ve Sağlıklı İletişim"], ["Udemy", ".NET ile Microservice Design Patterns"], ["Udemy", "ASP.NET Core + Redis / In-Memory"], ["Udemy", ".NET ile Microservices (.NET 9)"], ["Udemy", "ASP.NET Core API + SignalR ile QR Kodlu Sipariş Yönetimi"], ["Udemy", "ASP.NET Core Üyelik Sistemi (ASP.NET Core Identity) - 1/2"], ["Udemy", "C# .NET ile Yapay Zeka Entegrasyonları"], ["Udemy", "ASP.NET Core API / Angular ile E-Ticaret"], ["Udemy", "RabbitMQ | .NET Core"], ["Udemy", "Elasticsearch | .NET Core"], ["Udemy", "Angular 8/9 + Node.js + MongoDB (Gerçek Dünya Projesi)"]];
+var lang=(navigator.language||"tr").toLowerCase().indexOf("tr")===0?"tr":"en",filt="all",cur=0,timer;
+var tabs=[].slice.call(document.querySelectorAll("[role=tab]")),out=document.getElementById("out"),typed=document.getElementById("typed"),pane=document.getElementById("pane");
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function svg(){var n=["PostgreSQL","Redis","RabbitMQ","LDAP","e-bilet"],o='<svg viewBox="0 0 600 150" role="img" aria-label="TCDD architecture" style="min-width:520px;width:100%;height:auto;font:11px JetBrains Mono,monospace">';
+function box(x,y,w,h,l,a){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" style="fill:var(--bar);stroke:'+(a?'var(--acc)':'var(--line)')+'"/><text x="'+(x+w/2)+'" y="'+(y+h/2+4)+'" text-anchor="middle" style="fill:var(--text)">'+l+'</text>';}
+o+='<g style="stroke:var(--mute);stroke-opacity:.6;fill:none"><path d="M110 75H190"/>';
+n.forEach(function(_,i){o+='<path d="M330 75C375 75 375 '+(19+i*28)+' 420 '+(19+i*28)+'"/>';});o+="</g>";
+o+=box(10,55,100,40,"Angular")+box(190,55,140,40,".NET Core 6 API",1);
+n.forEach(function(l,i){o+=box(420,8+i*28,140,22,l);});
+return o+"</svg>";}
+function list(){var t=T[lang],h="";meta.forEach(function(m,i){if(filt!=="all"&&m.t!==filt)return;var p=t.proj[i];
+h+='<article class="proj"><h3>'+p.n+'<span class="mono">'+t.py[i]+'</span></h3><p>'+p.d+'</p><div class="tags mono">'+m.s+"</div>"+(m.g?'<div class="diag">'+svg()+'<small class="mono">'+t.cap+"</small></div>":"")+"</article>";});
+document.getElementById("list").innerHTML=h;}
+var views=[
+function(t){return "<p>"+t.about+"</p><dl>"+t.dl.map(function(r){return "<dt>"+r[0]+"</dt><dd>"+r[1]+"</dd>";}).join("")+"</dl>";},
+function(t){var c=["all","ai","api","web"].map(function(f,i){return '<button class="chip" data-f="'+f+'" aria-pressed="'+(f===filt)+'">'+t.chips[i]+"</button>";}).join("");return '<div class="chips mono" role="group" aria-label="'+t.filter+'">'+c+'</div><div id="list"></div>';},
+function(t){return stack.map(function(g,i){return '<div class="grp"><h3 class="mono">'+t.grp[i]+'</h3><div class="mono">'+g.map(function(x){return "<span>"+x+"</span>";}).join("")+"</div></div>";}).join("");},
+function(){return certs.map(function(c){return '<div class="row'+(c[2]?' hl':'')+'"><small class="mono">'+c[0]+"</small>"+c[1]+"</div>";}).join("");},
+function(t){return "<p>"+t.contact+'</p><div class="links"><a href="mailto:emn.ak100@gmail.com"><small class="mono">'+t.em+'</small>emn.ak100@gmail.com</a><a href="https://linkedin.com/in/eminakyz/"><small class="mono">linkedin</small>linkedin.com/in/eminakyz</a><a href="https://github.com/emnakyz"><small class="mono">github</small>github.com/emnakyz</a></div>';}
+];
+function show(){out.innerHTML=views[cur](T[lang]);if(cur===1){list();[].forEach.call(out.querySelectorAll(".chip"),function(c){c.onclick=function(){filt=c.dataset.f;show();};});}}
+function texts(){var t=T[lang];document.documentElement.lang=lang;document.getElementById("cvbtn").setAttribute("href",lang==="tr"?"cv-tr.pdf":"cv-en.pdf");
+[].forEach.call(document.querySelectorAll("[data-i]"),function(e){e.textContent=t[e.dataset.i];});
+tabs.forEach(function(b,i){b.textContent=t.tabs[i];});document.getElementById("lang").textContent=t.sw;document.getElementById("lang").setAttribute("aria-label",lang==="tr"?"Switch to English":"Türkçe'ye geç");}
+function select(i,anim){cur=i;clearInterval(timer);
+tabs.forEach(function(b,j){var on=j===i;b.setAttribute("aria-selected",on);b.tabIndex=on?0:-1;});pane.setAttribute("aria-labelledby",tabs[i].id);
+var cmd=T[lang].cmds[i];
+if(reduce||!anim){typed.textContent=cmd;show();return;}
+out.innerHTML="";typed.textContent="";var k=0;
+timer=setInterval(function(){k++;typed.textContent=cmd.slice(0,k);if(k>=cmd.length){clearInterval(timer);show();}},28);}
+tabs.forEach(function(b,i){
+b.addEventListener("click",function(){select(i,true);});
+b.addEventListener("keydown",function(e){var j=e.key==="ArrowRight"?i+1:e.key==="ArrowLeft"?i-1:-1;if(j<0||j>=tabs.length)return;e.preventDefault();tabs[j].focus();select(j,true);});});
+document.getElementById("lang").onclick=function(){lang=lang==="tr"?"en":"tr";texts();select(cur,false);};
+texts();select(0,true);
+})();
+</script>
+</body>
+</html>
